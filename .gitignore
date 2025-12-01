@@ -7,3 +7,20 @@ frontend/dist/
 
 # Env files
 *.env
+
+# Terraform
+infra/terraform/.terraform/
+infra/terraform/.terraform.lock.hcl
+infra/terraform/terraform.tfstate
+infra/terraform/terraform.tfstate.backup
+infra/terraform/*.tfvars
+!infra/terraform/terraform.tfvars.example
+
+# SSH Keys
+*.pem
+*.key
+
+# Ansible
+ansible/*.retry
+ansible/roles/*/files/*.pem
+.DS_Store
