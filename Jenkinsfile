@@ -168,10 +168,6 @@ pipeline {
         }
         
         stage('Deploy to EC2') {
-            when {
-                // Only deploy from main branch
-                branch 'main'
-            }
             steps {
                 echo '🚀 Deploying to AWS EC2...'
                 
@@ -201,9 +197,6 @@ pipeline {
         }
         
         stage('Health Check') {
-            when {
-                branch 'main'
-            }
             steps {
                 echo '🏥 Performing health checks...'
                 script {
