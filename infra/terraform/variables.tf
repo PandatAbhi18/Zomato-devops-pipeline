@@ -52,10 +52,9 @@ variable "key_name" {
 variable "allowed_ssh_cidr" {
   description = "CIDR blocks allowed to SSH into EC2 instance"
   type        = list(string)
-  # TODO: Replace 0.0.0.0/0 with your IP for better security
-  # Get your IP: curl ifconfig.me
-  # Format: ["YOUR_IP/32"]
-  default     = ["128.185.168.210/32"]
+  # Allowing from anywhere for easier access - restrict in production
+  # Your current IP: 128.185.168.216/32
+  default     = ["0.0.0.0/0"]
 }
 
 variable "vpc_cidr" {
