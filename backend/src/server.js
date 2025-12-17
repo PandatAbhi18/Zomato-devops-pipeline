@@ -11,6 +11,7 @@ app.use(bodyParser.json());
 app.use('/api/auth',require('./routes/auth'));
 app.use('/api/restaurants',require('./routes/restaurants'));
 app.use('/api/orders',require('./routes/orders'));
+app.use('/api/chat',require('./routes/chat'));
 app.get('/healthz',(req,res)=>res.json({status:'ok'}));
 
 async function init(){
