@@ -9,10 +9,11 @@ import Chatbot from './components/Chatbot';
 
 export default function App() {
   const [cart, setCart] = useState([]);
+  const cartCount = cart.reduce((sum, item) => sum + item.quantity, 0);
   
   return (
     <div className="app">
-      <Header />
+      <Header cartCount={cartCount} />
       <main>
         <Routes>
           <Route path="/" element={<Home />} />
